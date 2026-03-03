@@ -20,7 +20,7 @@ conda env create -f environment_continuous.yml -n carebn_continuous
 
 Experiments in continuous control can be run by calling:
 ```
-python main.py --policy TD3 --env Ant-v4  --spiking_neurons LIF --care_bn True
+python main.py --policy TD3 --env Ant-v4  --spiking_neurons LIF --care_bn True --seed 0
 ```
 
 The RL algorithm "--policy" can be "DDPG" or "TD3". The environment "--env" can be "Ant-v4", "HalfCheetah-v4", "Walker2d-v4", "Hopper-v4", and "InvertedDoublePendulum-v4". The spiking neurons "--spiking_neurons" can be "LIF", "CLIF", "DN", and "ANN". To test the vanilla spiking actor network, set "--care_bn" to "False". Hyper-parameters can be modified with different arguments to main.py.
